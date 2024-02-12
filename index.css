@@ -1,0 +1,131 @@
+:root {
+  --orange: #FF570A;
+  --white: #F2F5FF;
+  --green: #23CE6B;
+  --black: #040926;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-section {
+    /*background-color: var(--green);*/
+    color: #fff;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -100;
+    /*position: fixed;*/
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  #text {
+    font-size: 100px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    overflow: hidden; /* Hide the overflowed content */
+    white-space: nowrap; /* Ensure the text is not wrapped */
+    color: var(--black);
+  }
+  
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    animation: revealText 0.7s forwards;
+  }
+  .afterReveal{
+    animation: pulse 2s infinite alternate;
+
+  }
+  
+  @keyframes revealText {
+    from {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+.about-section{
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.about-section p{
+  margin: 40px 200px ;
+  font-weight: bolder;
+  padding: 15px;
+}
+
+
+.skills-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.skill-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, background-image 0.3s ease, background-size 0.5s ease;  
+  background-image: linear-gradient(to bottom, #4e54c8, #8f94fb); 
+  background-size: 100% 0;
+  background-repeat: no-repeat;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  background-size: 100% 100%; 
+}
+
+
+
+.skill-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.skill-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.skill-card p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.4;
+}
+
+
+.contact-section{
+  margin: 100px 500px;
+}
